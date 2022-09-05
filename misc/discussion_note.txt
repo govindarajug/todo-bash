@@ -1,0 +1,57 @@
+Todo :
+	1. test results format. [ DONE ]
+		1. note test pass fail count. [ DONE ]
+		2. make results easy to eye, reduce noise. [ DONE ]
+		3. error report separatly at bottom. [ DONE ]
+		4. failed test case should be in red. [ DONE ]
+	2. separate test helper(tools) in separate file. put assert_file and assert in that. [ DONE ]
+	3. change model data. make it compact for all tests. [ DONE ]
+	4. refactor tests [ DONE ]
+		1. test for main [ DONE ]
+		2. test for sub-cmds [ DONE ]
+		3. check for better test that will cover every hole.
+	5. many source of data, make it one source. [ DONE ]
+	6. edit all library functions [ DONE ]
+		1. pass variable/array instead of files [ DONE ]
+		2. check if function called successfully or not after calling. [ LATER ]
+		3. validate inputs [ LATER ]
+	7. have to write tests in main for mark_as_done [ DONE ]
+	8. start delete function nd tests[ DONE ]
+	9. change path variables absolute to relative. [ DONE ]
+	10. write test for array_search [ DONE ]
+	11. separate tests based on read/write or test/test_cases [ IN PROGRESS ]
+	12. work on new requirements [ LATER ]
+		1. tags for adding task [ DONE ]
+		2. tags in list and longlist [ DONE ]
+		3. filter by tags in longlist [ DONE ]
+		4. view by ID [ DONE ]
+		5. task by taglist [ LATER ]
+		6. tag, untag a task by id [ LATER ]
+	13. breaking down main [ DONE ]
+	14. array search grep need to be changed [ LATER ]
+	15. change assert error format [ LATER ]
+	16. check return codes to every function [ LATER ]
+	17. conditions to check [ LATER ]
+		1. if file does have data [ LATER ]
+		2. if args are valid [ LATER ]
+		3. if id is valid for done,delete [ DONE ]
+		4. give error msges based on sub-command [ DONE ]
+	18. seperate tools tests from test_library [ LATER ]
+	19. check the file updated or not in update new task [ LATER ]
+	20. check the test case 1 for write file data in assert_file () 
+---------------------------------
+
+optimization ideas :
+	1. separate function for reading file and making it an array in test library
+	2. should function preserve it's input?
+	3. ask abhishek about help formatting.
+	4. changing the variables in assert to array's
+
+--------------------
+
+optimization of main :
+	ADD
+		1. call add from main with task data, task, tags
+		2. validate the input and call add task based on validation
+		3. get back the modified task data and pass it to write data file function
+		4. generate a message based on the validation and pass it to the main

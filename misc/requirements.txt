@@ -1,0 +1,117 @@
+[ DONE ]
+bash$: task help
+task add <description> for adding a task
+task list for listing all tasks
+task done <id> for marking a task as done
+task delete <id> for deleting a task
+task longlist for listing all tasks with status
+task help for showing this help
+
+[ DONE ]
+bash$: task add "Throw a party "
+Created task 1.
+
+bash$: task add "buy balloons"
+Created task 2.
+
+bash$: task add "bake a cake for the party"
+Created task 3.
+
+
+[ DONE ]
+bash$: task list
+id     description
+-- ---------------
+1. Throw a party
+2. buy balloons
+3. bake a cake for the party
+
+[ DONE ]
+bash$: task done 2
+marked task 2 buy balloons as done.
+
+[ DONE ]
+bash$: task list
+id     description
+-- ---------------
+1. Throw a party
+3. bake a cake for the party
+
+[ DONE ]
+bash$: task longlist
+id status  description
+-- ------  --------------------------
+1.   ⌛    Throw a party
+2.   ✔️    buy balloon
+3.   ⌛    bake a cake for the party
+
+[ DONE ]
+bash$: task delete 3
+deleted task 3 bake a cake for the party.
+
+------
+[ DONE ]
+bash$:task add "invite friends" tags:birthday
+Created task 4.
+
+[ DONE ]
+bash$:task add "get dj for music" tags:fun,birthday
+Created task 5.
+
+Note: spaces are not allowed in tags.
+
+[ DONE ]
+bash$: task list
+id  description       tags
+--  --------------- --------------
+1.  Throw a party    []
+4.  invite friends   [birthday]
+5.  get dj for music [birthday fun]
+
+-----
+
+[ DONE ]
+bash$: task longlist
+id status  description     tags
+-- ------  --------------- --------------
+1.   ⌛    Throw a party    []
+2.   ✔️     buy balloons     []
+4.   ⌛    invite friends   [birthday]
+5.   ⌛    get dj for music [birthday fun]
+
+[ DONE ]
+bash$: task longlist tags:fun,birthday
+id status description        tags
+-- ------ ----------------- ---------------
+5.   ⌛    get dj for music [birthday fun]
+
+[ DONE ]
+bash$: task longlist tags:birthday
+id status description        tags
+-- ------ ----------------- ---------------
+4.   ⌛    invite friends   [birthday]
+5.   ⌛    get dj for music [birthday fun]
+
+[ LATER ]
+bash$:task taglist
+tag        task-ids
+---------  --------
+birthday     4,5
+fun          5
+
+[ LATER ]
+bash$:task tag 1 tags:birthday
+task 1 has been tagged with birthday.
+
+bash$:task tag 1,2 tags:birthday,party
+task 1 and 2 have been tagged with birthday and party.
+
+bash$:task untag 1 tags:birthday
+task 1 has been untagged from birthday.
+
+[ DONE ]
+bash$:task view 5
+id:           5
+status:       ⌛
+description:  get dj for music
+tags:         [birthday fun]

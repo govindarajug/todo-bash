@@ -1,0 +1,6 @@
+[1mtask add <description> [0mfor adding a task
+[1mtask list [0mfor listing all tasks
+[1mtask done <id> [0mfor marking a task as done
+[1mtask delete <id> [0mfor deleting a task
+[1mtask longlist [0mfor listing all tasks with status
+[1mtask help [0mfor showing this help
